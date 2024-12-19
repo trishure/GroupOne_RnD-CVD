@@ -1,0 +1,268 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-container {
+	margin-left:19%;
+	margin-right: 1%;
+	border: 2px solid black;
+	border-radius: 18px;
+}
+.header {
+  margin-left:18%;
+  padding: 30px;
+  text-align: right;
+  background: #dcdcdc;
+}
+.header h1 {
+  font-size: 32px;
+}
+.avatar {
+  padding-left: 27%;
+  width: 45%;
+  height: 12%;
+}
+.title {
+	padding: 3px 18px;
+}
+.contents-bar {
+	margin: 12px;
+	padding:2px 16px;
+	height: 80%;
+	border: 2px solid black;
+	border-radius: 18px;
+}
+
+/* Search Bar */
+
+.searchbar .search {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  padding-left: 32%;
+  position: relative;
+  display: flex;
+}
+.searchbar .searchTerm {
+  width: 75%;
+  border: 1px solid black;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+.searchbar .searchTerm:focus{
+  color: #00B4CC;
+}
+.searchbar .searchButton {
+  width: 40px;
+  height: 50px;
+  border: 1px solid black;
+  background: #fff;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.searchbar .searchButton i{
+  color: black;
+}
+
+/* Navigation Bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 18%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 16px 32px;
+  text-decoration: none;
+  text-align: left;
+  
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Button */
+
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.create {
+  background-color: #32cd32; 
+  color: #fff; 
+}
+
+.create:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+.terminate {
+  background-color: #cd5c5c; 
+  color: #fff; 
+}
+
+.terminate:hover {
+  background-color: #dc143c;
+  color: white;
+}
+.modify {
+  background-color: #c0c0c0; 
+  color: #fff; 
+}
+
+.modify:hover {
+  background-color: #696969;
+  color: white;
+}
+
+
+/* Create Button Form */
+
+.container input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.container button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.container button:hover {
+  opacity: 0.8;
+}
+
+.container .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.logo {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 24px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Create Button Form (The Modal)*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 1.3s;
+  animation: animatezoom 1.3s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

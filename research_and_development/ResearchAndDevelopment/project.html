@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://kit.fontawesome.com/3ef3bf61c7.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+
+<ul>
+<img src="Images/RandDIcon.png" alt="Avatar" class="avatar">
+  <li><a href="homepage.html">Home</a></li>
+  <li><a class="active" href="project.html">Project</a></li>
+  <li><a href="experiment.html">Experiment</a></li>
+  <li><a href="funding.html">Funding</a></li>
+  <li><a href="collaboration.html">Collaboration</a></li>
+  <li><a href="publication.html">Publication</a></li>
+  <li><a href="researcher.html">Researcher</a></li>
+</ul>
+<div class="header">
+  <h1>Project</h1>
+</div>
+
+<!-- Search Bar -->
+
+<div class="searchbar">
+         <div class="search">
+            <input type="text" class="searchTerm" placeholder="What are you looking for?">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+           </button>
+         </div>
+      </div>
+<div class="body-container">
+
+<!-- Buttons -->
+
+<button onclick="document.getElementById('id01').style.display='block'" class="button create">Create Project</button>
+<button class="button terminate">Terminate Project</button>
+<button class="button modify">Modify Project</button>
+
+<!-- Create Project Modal Form -->
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="Images/RandDIcon.png" alt="Avatar" class="logo">
+    </div>
+
+    <div class="container">
+      <label for="pname"><b>Project Name</b></label>
+      <input type="text" placeholder="Enter Project Name" name="pname" required>
+	  <label for="description"><b>Project Description</b></label>
+      <input type="text" placeholder="Enter Project Description" name="description" required>
+      <button type="submit">Create Project</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<!-- Contents -->
+
+<div class="title">
+	<h2>Active Projects</h3>
+</div>
+<div class="contents-bar">
+ <h3>Detail</h3>
+  <h2>content to be displayed here</h2>
+  <h3>content to be displayed here</h3>
+  <p>content to be displayed here</p>
+  <p>content to be displayed here</p>
+</div>
+<div class="title">
+	<h2>Content Title</h3>
+</div>
+<div class="contents-bar">
+ <h3>Detail</h3>
+  <h2>content to be displayed here</h2>
+  <h3>content to be displayed here</h3>
+  <p>content to be displayed here</p>
+  <p>content to be displayed here</p>
+</div>
+<div class="title">
+	<h2>Content Title</h3>
+</div>
+<div class="contents-bar">
+ <h3>Detail</h3>
+  <h2>content to be displayed here</h2>
+  <h3>content to be displayed here</h3>
+  <p>content to be displayed here</p>
+  <p>content to be displayed here</p>
+</div>
+</div>
+</body>
+<script>
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</html>
+
+
