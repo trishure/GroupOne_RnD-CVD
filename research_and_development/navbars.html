@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <div class="top-navbar">
+        <img id="menu-icon" src="img/menu.png" alt="Menu">
+        <img src="img/rd1.jpg" alt="">
+
+        <div class="search-bar-container">
+    <img class="icon" src="img/search.png" alt="Search Icon">
+    <input type="text" id="search-input" placeholder="Search projects..." oninput="filterProjects()">
+    <img class="icon" src="img/close.png" alt="X Icon" id="clear-search" onclick="clearSearch()">
+    <div id="suggestions" class="suggestions"></div> <!-- Container for suggestions -->
+</div>
+
+        <img  id="add-icon" src="img/add.png" alt="">
+            <img id="notification-icon" src="img/bell.png" alt="">
+            <img class="profile" src="img/profile.png" alt="">
+    </div>
+    <div class="side-navbar">
+        <a class="sidebar-icon" href="/homepage.php"><img src="img/home.png" alt=""><span>Homepage</span></a>
+        <a class="sidebar-icon" href="/project.php"><img src="img/home.png" alt=""><span>Project</span></a>
+        <a class="sidebar-icon" href="/experminent.php"><img src="img/home.png" alt=""><span>Experiment</span></a>
+        <a class="sidebar-icon" href="/funding.php"><img src="img/home.png" alt=""><span>Funding</span></a>
+        <a class="sidebar-icon" href="/collaboration.php"><img src="img/home.png" alt=""><span>Collaboration</span></a>
+        <a class="sidebar-icon" href="/publication.php"><img src="img/home.png" alt=""><span>Publication</span></a>
+        <a class="sidebar-icon" href="/researcher.php"><img src="img/home.png" alt=""><span>Researcher</span></a>
+    </div>
+   
+
+    <div class="right-sidebar">
+        <p>Right Sidebar Content</p>
+    </div>
+
+    <div class="dropdown-menu" id="dropdown-menu">
+        <a href="#">Create New Project</a>
+        <a href="#">Others</a>
+    </div>
+
+    <script src="search.js"></script> <!-- Include the common JavaScript file -->
+    <script>
+       document.getElementById('menu-icon').addEventListener('click', function() {
+            document.querySelector('.side-navbar').classList.toggle('expanded');
+        });
+
+        document.addEventListener('click', function(event) {
+            var isClickInside = document.querySelector('.side-navbar').contains(event.target) || document.getElementById('menu-icon').contains(event.target);
+
+            if (!isClickInside) {
+                document.querySelector('.side-navbar').classList.remove('expanded');
+            }
+        });
+
+        document.getElementById('notification-icon').addEventListener('click', function() {
+        document.querySelector('.right-sidebar').classList.toggle('expanded');
+    });
+
+    document.addEventListener('click', function(event) {
+        var isClickInside = document.querySelector('.right-sidebar').contains(event.target) || document.getElementById('notification-icon').contains(event.target);
+
+        if (!isClickInside) {
+            document.querySelector('.right-sidebar').classList.remove('expanded');
+        }
+    });
+
+    document.getElementById('add-icon').addEventListener('click', function(event) {
+        event.stopPropagation();
+        document.getElementById('dropdown-menu').classList.toggle('show');
+    });
+
+    document.addEventListener('click', function(event) {
+        var isClickInside = document.getElementById('dropdown-menu').contains(event.target) || document.getElementById('add-icon').contains(event.target);
+
+        if (!isClickInside) {
+            document.getElementById('dropdown-menu').classList.remove('show');
+        }
+    });
+
+
+   
+
+    </script>
+</body>
+</html>
+
